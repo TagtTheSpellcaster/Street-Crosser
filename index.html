@@ -26,7 +26,7 @@
   <button class="down" data-d="0,1">▼</button>
   <button class="right" data-d="1,0">▶</button>
 </div>
-<div id="help">Frecce / WASD: muovi · P: pausa · Invio/Spazio: avvia · Swipe su touch</div>
+<div id="help">ARROWS / WASD: move · P: pause · Enter/Space: Start · Swipe on touch</div>
 
 <script>
 (() => {
@@ -350,7 +350,7 @@ function drawHUD() {
   ctx.fillStyle = '#0c0d10'; ctx.fillRect(0, -HUD, W, HUD);
   ctx.font = 'bold 14px monospace'; ctx.textBaseline = 'middle';
   ctx.fillStyle = '#ccc'; ctx.textAlign = 'left';
-  ctx.fillText('PUNTI ' + String(score).padStart(6, '0'), 10, -HUD + 14);
+  ctx.fillText('POINTS ' + String(score).padStart(6, '0'), 10, -HUD + 14);
   ctx.textAlign = 'center';
   ctx.fillText('RECORD ' + String(hi).padStart(6, '0'), W / 2, -HUD + 14);
   ctx.textAlign = 'right';
