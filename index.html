@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>Guado</title>
+<title>Street Crosser</title>
 <style>
   html, body { margin: 0; height: 100%; background: #14161a; color: #ddd; font-family: monospace; }
   body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; touch-action: none; user-select: none; -webkit-user-select: none; }
@@ -354,7 +354,7 @@ function drawHUD() {
   ctx.textAlign = 'center';
   ctx.fillText('RECORD ' + String(hi).padStart(6, '0'), W / 2, -HUD + 14);
   ctx.textAlign = 'right';
-  ctx.fillText('LIV ' + level, W - 10, -HUD + 14);
+  ctx.fillText('LEV ' + level, W - 10, -HUD + 14);
   ctx.textAlign = 'left';
   for (let i = 0; i < lives; i++) drawFrog(8 + i * 22 - 10, -HUD + 20 - 10, 0, '#7fe27f', 0.45);
   // barra tempo
@@ -396,10 +396,10 @@ function render() {
     }
   }
   drawHUD();
-  if (state === 'title') overlay('GUADO', ['Porta le rane nelle tane', 'Evita il traffico, attraversa il fiume', '', 'Invio / Spazio / tocco per iniziare']);
-  else if (state === 'pause') overlay('PAUSA', ['Premi P per riprendere']);
-  else if (state === 'gameover') overlay('FINE PARTITA', ['Punti: ' + score, '', 'Invio / Spazio / tocco per ricominciare']);
-  else if (state === 'levelup') overlay('LIVELLO ' + level + ' COMPLETATO', ['+1000 punti']);
+  if (state === 'title') overlay('STREET CROSSER', ['Bring the frogs home', 'Avoid traffic, cross the river', '', 'Enter / Space / Tap to Start']);
+  else if (state === 'pause') overlay('PAUSE', ['Press P to resume']);
+  else if (state === 'gameover') overlay('GAME OVER', ['Points: ' + score, '', 'Enter / Space / Tap to Start']);
+  else if (state === 'levelup') overlay('LEVEL ' + level + ' COMPLETED', ['+1000 points']);
 }
 
 // ---------- Loop ----------
